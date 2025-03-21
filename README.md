@@ -21,7 +21,7 @@ Nectar 是一个利用数据驱动方法优化中药方剂的 Python 包。它�
 
 1. **Clone the repository / 克隆仓库:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/ChenHuangMUST/NeCTAR.git
    cd nectar
    ```
 
