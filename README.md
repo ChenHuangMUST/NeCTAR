@@ -1,4 +1,4 @@
-# Nectar - Negative-Correlation-based TCM Architecture for Reversal
+# NeCTAR - Negative-Correlation-based TCM Architecture for Reversal
 
 ## Project Description
 
