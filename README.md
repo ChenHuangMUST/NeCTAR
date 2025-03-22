@@ -67,6 +67,7 @@ Open a command line tool, navigate to the root directory of the NeCTAR project, 
 pip install -e .
 ```
 
+Usage in Your Python Script
 ```python
 from nectar.main import nectar  # Import the main pipeline function
 
