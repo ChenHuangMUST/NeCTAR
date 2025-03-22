@@ -9,10 +9,10 @@ Nectar is a Python package designed to optimize Traditional Chinese Medicine (TC
 ## Installation
 
 ### Requirements
-- Python 3.8 or higher / Python 3.8 或更高版本  
+- Python 3.8 or higher
 - Required packages: numpy, pandas, torch, matplotlib, tqdm, scikit-learn, scipy, seaborn, dill, openpyxl  
 
-### Installation Steps / 安装步骤
+### Installation Steps
 
 1. **Clone the repository:**
    ```bash
@@ -41,23 +41,31 @@ Nectar is a Python package designed to optimize Traditional Chinese Medicine (TC
 
 ---
 
-## Usage / 用法
+## Usage
 
-### Command-Line Interface (CLI) / 命令行界面
+### Command-Line Interface (CLI)
 
 After installation, run the main optimization pipeline by executing the `nectar` command.  
 
 ```bash
-nectar --herb_info_path path/to/info_input_herbs.xlsx --disease_data_path path/to/disease_nes.pkl
+cd NeCTAR
+python nectar/main.py --herb_info_path path/to/info_input_herbs.xlsx --disease_data_path path/to/disease_nes.pkl
 ```
-
-- If no arguments are provided, default file paths within the code will be used.  
+- info_input_herbs is an initial formula dataset with two columns. The first column is "name", where each row represents the Chinese name of a traditional Chinese medicine herb, and the second column is "dosage", a decimal that indicates the dosage of the herb. If an herb not used during training is entered, the program will return a lookup failure error.
+- disease_nes is the GSEA result for the disease and must include the columns ['ID', 'NES'], where "ID" is the pathway ID and "NES" is the normalized enrichment score. In fact, the program can handle disease_nes provided either in the .pkl or .txt format, as long as the file contains the required columns.
+- If no arguments are provided, default premature ovarian failure file paths within the code will be used. 
 
 The CLI will output the optimized herbal formula and score, and save detailed results (including plots) in a timestamped results folder.  
 
 ### Library Usage
 
 You can also use Nectar as a library within your own Python scripts:
+
+Enter the project directory and install
+Open a command line tool, navigate to the root directory of the NeCTAR project, and then execute:
+```bash
+pip install -e .
+```
 
 ```python
 from nectar.main import nectar  # Import the main pipeline function
@@ -77,5 +85,5 @@ The returned `result` is a dictionary with:
 
 ---
 
-## Author / 作者
+## Author
 **Zheng Wu**
