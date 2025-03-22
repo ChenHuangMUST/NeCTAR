@@ -20,12 +20,18 @@ Nectar is a Python package designed to optimize Traditional Chinese Medicine (TC
    cd nectar
    ```
 
-2. **Create and activate a virtual environment (recommended) / 创建并激活虚拟环境（推荐）:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate     # Linux/MacOS
-   venv\Scripts\activate        # Windows
-   ```
+2. **Create and activate a virtual environment (recommended):**
+
+    - **On Linux/MacOS:**
+      ```bash
+      python -m venv venv
+      source venv/bin/activate
+      ```
+    - **On Windows:**
+      ```bash
+      python -m venv venv
+      venv\Scripts\activate
+      ```
 
 3. **Install dependencies:**
    *Install dependencies from requirements.txt:*
