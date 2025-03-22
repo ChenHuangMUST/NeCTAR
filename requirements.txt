@@ -1,0 +1,12 @@
+# NeCTAR 项目的依赖包
+
+numpy
+pandas
+torch
+matplotlib
+tqdm
+scikit-learn
+scipy
+seaborn
+dill
+openpyxl
