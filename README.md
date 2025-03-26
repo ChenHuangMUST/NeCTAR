@@ -43,6 +43,12 @@ Nectar is a Python package designed to optimize Traditional Chinese Medicine (TC
 
 ## Usage
 
+Enter the project directory and install
+Open a command line tool, navigate to the root directory of the NeCTAR project, and then execute:
+```bash
+pip install -e .
+```
+
 ### Command-Line Interface (CLI)
 
 After installation, run the main optimization pipeline by executing the `nectar` command.  
@@ -60,12 +66,6 @@ The CLI will output the optimized herbal formula and score, and save detailed re
 ### Library Usage
 
 You can also use Nectar as a library within your own Python scripts:
-
-Enter the project directory and install
-Open a command line tool, navigate to the root directory of the NeCTAR project, and then execute:
-```bash
-pip install -e .
-```
 
 Usage in Your Python Script
 ```python
