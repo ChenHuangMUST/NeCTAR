@@ -67,7 +67,7 @@ def infer(model, input_data, device):
 # herb_filter 函数：加载模型并进行预测
 def herb_filter(inputdata):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model_path = r"D:\myWork\github\nectar\data\weighted_herb_model_re_50.pth"
+    model_path = r"nectar\data\weighted_herb_model_re_50.pth"
     
     model = load_model(model_path, input_size=2683, output_size=595, device=device)
     predictions = infer(model, inputdata, device)
