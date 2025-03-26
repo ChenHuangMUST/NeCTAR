@@ -4,6 +4,7 @@ import numpy as np
 from torch.utils.data import DataLoader
 from sklearn.preprocessing import MinMaxScaler
 import dill
+import os
 
 '''归一化函数：将数据缩放到 [-1, 1]'''
 def normalize_column(df):
@@ -67,8 +68,15 @@ def infer(model, input_data, device):
 # herb_filter 函数：加载模型并进行预测
 def herb_filter(inputdata):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model_path = r"nectar\data\weighted_herb_model_re_50.pth"
-    
+    # 获取当前脚本所在的目录
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # 获取当前脚本目录的上一级目录
+    parent_dir = os.path.dirname(script_dir)
+    # 获取当前脚本目录的上两级目录
+    grandparent_dir = os.path.dirname(parent_dir)
+    # 拼接目标文件的路径
+    model_path = os.path.join(grandparent_dir, "nectar", "data", "weighted_herb_model_re_50.pth")
+        
     model = load_model(model_path, input_size=2683, output_size=595, device=device)
     predictions = infer(model, inputdata, device)
     return predictions
